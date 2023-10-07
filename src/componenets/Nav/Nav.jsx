@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { MyContextProvider } from "../context/MyContext";
 
 
 const Nav = () => {
-  
+  const {user, handleSignOut}=useContext(MyContextProvider);
 
   return (
     <div className="navbar bg-base-100 mt-5 font-body">
@@ -27,8 +29,11 @@ const Nav = () => {
       <li className=" mr-4"><NavLink to={'/about'}>About</NavLink></li>
     </ul>
   </div>
+  <div>
+    {user? <img src={user} alt="" /> }
+  </div>
   <div className="navbar-end">
-    <a className="btn text-xl">Button</a>
+    {user? <button onClick={handleSignOut}>Log out</button>: <Link to={'/signIn'}>Login</Link>} 
   </div>
 </div>
     
