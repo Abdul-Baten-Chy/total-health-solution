@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Virtual Health Fair Events",
+      "price": 19,
+      "description": "We can create your Virtual Health Fair Event. We have a reliable network operation center that will allow your corporation to host your next Virtual Health Fair with Health Fairs Direct.",
+      "image": "https://i.ibb.co/vvZLgm9/image-2.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Wellness Programs",
+      "price": 29,
+      "description": "We have hundreds of programs that will fit your goals and align with your Corporate Vision in addition to your Health Insurance company. We can deliver the best programs.",
+      "image": "https://i.ibb.co/D5WczJQ/image-5.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Interactive Mini Trade Shows",
+      "price": 39,
+      "description": "We offer interactive mini trade shows that can be hosted at your location. In addition, we can arrange your events at any site that you choose. So let Health Fairs Direct take care of you.",
+      "image": "https://i.ibb.co/80XZKgn/image-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Screening Services",
+      "price": 49,
+      "description": "Now more than ever your business should take preventive measures to help your employees succeed by providing them with the best screening services that they need.",
+      "image": "https://i.ibb.co/gZBTR5G/image-4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Employee Wellness Programs",
+      "price": 59,
+      "description": "Health Fairs Direct provides services such as Lectures and interactive coaching sessions that are in line with your business needs. We can provide In-Person Coaching as well as Virtual.",
+      "image": "https://i.ibb.co/YbhBBHy/image-1.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Wellness Challenges",
+      "price": 69,
+      "description": "All of our challenges focus on creating the awareness and health consciousness that your employee will need. We can help your employees create new ways to increase their productivity.",
+      "image": "https://i.ibb.co/ngxjnXr/image-6.jpg"
+    }
+  ]
+  
