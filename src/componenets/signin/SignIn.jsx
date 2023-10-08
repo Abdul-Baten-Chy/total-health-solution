@@ -1,19 +1,30 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MyContextProvider } from "../context/MyContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignIn = () => {
     const {handleSignIn}= useContext(MyContextProvider);
+    const location = useLocation();
+    const navigate = useNavigate()
+    const [sucess, setSuccess]=useState('')
 const handleFormSubmit=e=>{
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get('email');
     const password = form.get('password');
     handleSignIn(email, password)
-    .then((res)=>console.log(res.user))
+    .then((res)=>{
+      
+      
+      setSuccess(notify)
+      navigate(location?.state? location.state: '/')
+    })
     .catch(err=> console.log(err.message))
 }
+const notify = () => toast("Wow so easy!")
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -47,10 +58,12 @@ const handleFormSubmit=e=>{
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary" onClick={notify}>Login</button>
+              {sucess}
             </div>
           </form>
         </div>
+        <ToastContainer />
     </div>
     );
 };

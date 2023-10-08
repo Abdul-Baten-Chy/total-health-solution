@@ -29,10 +29,14 @@ const Nav = () => {
       <li className=" mr-4"><NavLink to={'/about'}>About</NavLink></li>
     </ul>
   </div>
-  <div>
-    {user? <img src={user} alt="" /> }
-  </div>
+  
   <div className="navbar-end">
+  <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          {user?.photoURL? <img src={user.photoURL}/>: <img src="https://i.ibb.co/9YTytjp/profile.png"/> }
+        </div>
+       <p>{user?.email}</p>
+      </label>
     {user? <button onClick={handleSignOut}>Log out</button>: <Link to={'/signIn'}>Login</Link>} 
   </div>
 </div>

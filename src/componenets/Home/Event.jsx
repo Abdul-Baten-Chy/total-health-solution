@@ -19,7 +19,7 @@ const Event = ({ event }) => {
       </figure>
       <div className="flex gap-5 mb-7 justify-between m-5">
       <button className="btn btn-primary bg-[#26b1e9] border-none text-black">Price: {price}</button>
-      <Link to={`/events/${id}`}><button className="btn btn-primary bg-[#66eb8e] text-black border-none">View Details</button></Link>
+      <Link to={`/${id}`}><button className="btn btn-primary bg-[#66eb8e] text-black border-none">View Details</button></Link>
       </div>
     </div>
   );

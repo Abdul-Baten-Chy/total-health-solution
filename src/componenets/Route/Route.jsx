@@ -6,6 +6,7 @@ import Events from "../Home/Events";
 import Register from "../Register/Register";
 import Details from "../Home/Details";
 import SignIn from "../signin/SignIn";
+import Private from "../private/Private";
   
   
   const router = createBrowserRouter([
@@ -30,8 +31,8 @@ import SignIn from "../signin/SignIn";
             element:<Register></Register>
         },
         {
-          path:"/events/:ids",
-          element:<Details></Details>,
+          path:"/:ids",
+          element:<Private><Details></Details></Private>,
           loader:()=>fetch("../../../public/events.json")
         },
         {
