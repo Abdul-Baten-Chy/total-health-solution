@@ -7,12 +7,12 @@ const Root = () => {
     return (
         <div>
             <div className="max-w-[1180px] mx-auto">
-            <Nav></Nav>
-            <Outlet></Outlet>
-        </div>
-        <div>
-            <Footer></Footer>
-        </div>
+                <Nav></Nav>
+                <Outlet></Outlet>
+            </div>
+            <div>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };

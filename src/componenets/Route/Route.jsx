@@ -8,6 +8,7 @@ import Details from "../Home/Details";
 import SignIn from "../signin/SignIn";
 import Private from "../private/Private";
 import Error from "../error/Error";
+import Journal from "../journal/Journal";
   
   
   const router = createBrowserRouter([
@@ -26,7 +27,7 @@ import Error from "../error/Error";
         },
         {
             path:"/events",
-            element: <Events></Events>
+            element: <Private><Events></Events></Private>
         },
         {
             path:"/register",
@@ -40,6 +41,10 @@ import Error from "../error/Error";
         {
           path:"/signIn",
           element:<SignIn></SignIn>
+        },
+        {
+          path:"/journal",
+          element:<Private><Journal></Journal></Private>
         }
       ]
     },

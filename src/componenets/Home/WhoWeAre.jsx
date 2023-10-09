@@ -11,7 +11,7 @@ const WhoWeAre = () => {
                     <div className="w-52 h-52 bg-[#26b1e9] absolute top-72 left-[270px]">
                         
                     </div>
-                    <img src="https://i.ibb.co/sm5v1hg/doctor-two.jpg" alt="" className="absolute top-8 left-8 w-[400px]" />
+                    <img src="https://i.ibb.co/9Ghqqst/tall.jpg" alt="" className="h-[520px] absolute top-8 left-8 w-[400px]" />
                 </div>
                 
             </div>

@@ -17,6 +17,7 @@ const Nav = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl">
         <li className=" mr-4"><NavLink to={'/'}>Home</NavLink></li>
         <li className=" mr-4"><NavLink to={'/events'}>Events</NavLink></li>
+        <li className=" mr-4"><NavLink to={'/journal'}>Journal</NavLink></li>
         <li className=" mr-4"><NavLink to={'/about'}>About</NavLink></li>
     
       </ul>
@@ -27,6 +28,7 @@ const Nav = () => {
     <ul className="menu menu-horizontal px-1 text-xl">
       <li className=" mr-4"><NavLink to={'/'}>Home</NavLink></li>
       <li className=" mr-4"><NavLink to={'/events'}>Events</NavLink></li>
+      <li className=" mr-4"><NavLink to={'/journal'}>Journal</NavLink></li>
       <li className=" mr-4"><NavLink to={'/about'}>About</NavLink></li>
     </ul>
   </div>

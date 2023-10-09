@@ -38,6 +38,7 @@ const SignIn = () => {
     .then(res=>{
       console.log(res.user);
       setSuccessMsg('Login Successful')
+      navigate(location?.state? location.state: '/')
     })
     .catch(err=>{
       console.log(err.message);
