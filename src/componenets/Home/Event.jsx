@@ -6,7 +6,7 @@ const Event = ({ event }) => {
     const {title, price, description, image,id}=event;
 
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl mx-auto">
       <div className="card-body border-t-[50px] rounded-2xl border-[#66eb8e]">
         <h2 className="card-title text-[30px] font-head font-bold">{title}</h2>
         <p>{description}</p>

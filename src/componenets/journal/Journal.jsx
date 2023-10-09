@@ -1,8 +1,8 @@
 const Journal = () => {
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl mb-5">
-        <figure className="min-w-[400px]">
+      <div className="card md:card-side bg-base-100 shadow-xl mb-5 mt-10">
+        <figure className="min-w-[150px] md:min-w-[250px] lg:min-w-[400px]">
           <img
             src="https://i.ibb.co/vvZLgm9/image-2.jpg"
             alt="Movie"
@@ -17,8 +17,8 @@ const Journal = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side bg-base-100 shadow-xl mb-5">
-        <figure className="min-w-[400px]">
+      <div className="card md:card-side bg-base-100 shadow-xl mb-5">
+        <figure className="min-w-[150px] md:min-w-[250px] lg:min-w-[400px]">
           <img
             src="https://i.ibb.co/80XZKgn/image-3.jpg"
             alt="Movie"
@@ -33,8 +33,8 @@ const Journal = () => {
           </div>
         </div>
       </div>
-      <div className="card card-side bg-base-100 shadow-xl mb-5">
-        <figure className="min-w-[400px]">
+      <div className="card md:card-side bg-base-100 shadow-xl mb-5">
+        <figure className="min-w-[150px] md:min-w-[250px] lg:min-w-[400px]">
           <img
             src="https://i.ibb.co/SJWzjmz/h3.png"
             alt="Movie"

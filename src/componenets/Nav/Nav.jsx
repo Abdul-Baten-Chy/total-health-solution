@@ -22,7 +22,7 @@ const Nav = () => {
     
       </ul>
     </div>
-    <img src="https://i.ibb.co/XjctfLR/logo.png" alt="" className="block w-[200px]" />
+    <img src="https://i.ibb.co/XjctfLR/logo.png" alt="" className="hidden md:block md:w-[200px]" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-xl">

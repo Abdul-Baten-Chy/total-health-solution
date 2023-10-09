@@ -10,14 +10,15 @@ const Details = () => {
   console.log(data, info);
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col lg:flex-row ">
         <img
+        
           src={data.image}
-          className="max-w-md rounded-lg shadow-2xl"
+          className="max-w-[350px] md:max-w-md lg:max-w-lg rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-head font-bold">{data.title}</h1>
-          <p className="py-6">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-head font-bold">{data.title}</h1>
+          <p className="my-6">
             {data.description}
           </p>
           <button className="btn btn-primary">Price: {data.price}</button>
