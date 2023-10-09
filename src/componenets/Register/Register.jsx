@@ -1,21 +1,41 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { MyContextProvider } from "../context/MyContext";
+import {  updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
-    const {handleRegister, user}= useContext(MyContextProvider)
-const handleFormSubmit=e=>{
+    const [sucessMsg, setSuccessMsg]=useState('');
+    const [errMsg, setErrMsg]=useState('')
+    const {handleRegister}= useContext(MyContextProvider)
+    const handleFormSubmit=e=>{
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get('email');
     const name = form.get('name');
+
+    setErrMsg('');
   
     const password = form.get('password');
+      if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()])(.{6,})$/.test(password)){
+        return;
+      }
+
     handleRegister(email, password)
     .then((res)=>{
-      console.log(res.user);
+      setSuccessMsg('Registration successful')
+      updateProfile(res.user,{displayName:name})
+      .then()
+      .catch()
+
     })
-    .catch(err=> console.log(err.message))
+    .catch(err=> {
+      console.log(err.message);
+      setErrMsg(err.message)
+    })
+    
 }
 
   return (
@@ -63,9 +83,13 @@ const handleFormSubmit=e=>{
             </div>
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary">Register</button>
+              
             </div>
           </form>
+          
+          {errMsg && <p className="text-red-500 text-center mb-3">{errMsg}</p>}
         </div>
+        <ToastContainer />
     </div>
   );
 };

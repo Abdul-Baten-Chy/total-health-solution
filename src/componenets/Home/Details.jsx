@@ -1,7 +1,8 @@
+
 import { useLoaderData, useParams } from "react-router-dom";
 
-const Details = () => {
 
+const Details = () => {
     const info =useLoaderData();
     const {ids}=useParams()
     const data = info.find(obj=> {

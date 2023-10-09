@@ -5,6 +5,7 @@ import { MyContextProvider } from "../context/MyContext";
 
 const Nav = () => {
   const {user, handleSignOut}=useContext(MyContextProvider);
+  console.log(user);
 
   return (
     <div className="navbar bg-base-100 mt-5 font-body">
@@ -31,11 +32,12 @@ const Nav = () => {
   </div>
   
   <div className="navbar-end">
+  <p className="mr-3">{user?.displayName}</p>
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           {user?.photoURL? <img src={user.photoURL}/>: <img src="https://i.ibb.co/9YTytjp/profile.png"/> }
         </div>
-       <p>{user?.email}</p>
+       
       </label>
     {user? <button onClick={handleSignOut}>Log out</button>: <Link to={'/signIn'}>Login</Link>} 
   </div>
